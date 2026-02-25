@@ -1,0 +1,1566 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICoBiomasSE 2026 - International Conference on Biomass Utilization &amp; Sustainable Energy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    * {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    :root {
+      --primary: #0d5e3d;
+      --secondary: #0f3d5f;
+      --accent: #ff8c42;
+      --gold: #d4af37;
+      --text: #1a1a1a;
+      --light-bg: #f8f9fa;
+      --surface: #ffffff;
+    }
+
+      .hero-pattern {
+      background: linear-gradient(135deg, rgba(13, 94, 61, 0.7) 0%, rgba(15, 61, 95, 0.65) 50%, rgba(13, 94, 61, 0.7) 100%),
+                  url('https://imgur.com/faUoDjn.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+
+    .gradient-accent {
+      background: linear-gradient(135deg, #ff8c42 0%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-premium {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(13, 94, 61, 0.1);
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+    }
+
+    .card-premium:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 140, 66, 0.3);
+      box-shadow: 0 20px 50px rgba(13, 94, 61, 0.15);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 3rem;
+      width: 2px;
+      height: calc(100% + 2rem);
+      background: linear-gradient(180deg, #ff8c42 0%, rgba(255, 140, 66, 0.2) 100%);
+      transform: translateX(-1px);
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: #ff8c42;
+      border: 3px solid white;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2);
+      z-index: 10;
+    }
+
+    .nav-link {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #ff8c42, #d4af37);
+      transition: left 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      left: 0;
+    }
+
+    .button-premium {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .button-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: left 0.3s ease;
+    }
+
+    .button-premium:hover::before {
+      left: 100%;
+    }
+
+    .speaker-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #ff8c42, #d4af37);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    }
+
+    .pricing-table {
+      border-collapse: collapse;
+    }
+
+    .pricing-table td, .pricing-table th {
+      padding: 1rem;
+      border: 1px solid rgba(13, 94, 61, 0.1);
+    }
+
+    .pricing-table th {
+      background: linear-gradient(135deg, #0d5e3d 0%, #0f3d5f 100%);
+      color: white;
+      font-weight: 600;
+    }
+
+    .pricing-table tr:nth-child(even) {
+      background: rgba(13, 94, 61, 0.02);
+    }
+
+    .pricing-highlight {
+      background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(212, 175, 55, 0.1));
+      border: 2px solid #ff8c42;
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    .stagger-5 { animation-delay: 0.5s; }
+
+    .featured-badge {
+      background: linear-gradient(135deg, #ff8c42, #d4af37);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .section-header {
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40%;
+      height: 3px;
+      background: linear-gradient(90deg, #ff8c42, transparent);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-white text-stone-900">
+  <div id="app-wrapper" class="w-full h-full overflow-auto">
+   <!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <div class="flex items-center gap-3 group cursor-pointer">
+       <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow"><img src="https://imgur.com/sm30H0S.png" alt="ICoBiomasSe Logo" class="w-full h-full object-cover" loading="lazy" onerror="console.error('Logo failed to load:', this.src); this.parentElement.style.background='linear-gradient(135deg, #0d5e3d 0%, #0f3d5f 100%)'; this.style.display='none';">
+       </div>
+       <div class="hidden sm:block">
+        <div class="text-lg md:text-xl font-bold font-display text-emerald-900">
+         ICoBiomasSE
+        </div>
+        <div class="text-xs md:text-sm text-orange-600 font-semibold">
+         2026
+        </div>
+       </div>
+      </div><!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-8 text-sm">
+       <a href="#home" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Home</a> <a href="#about" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">About</a> <a href="#topics" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Topics</a> <a href="#speakers" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Speakers</a> <a href="#publication" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Publication</a> <a href="#fees" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Fees</a> <a href="#dates" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Dates</a> <a href="#past-conferences" class="nav-link text-stone-700 hover:text-emerald-700 font-medium">Past Conferences</a>
+       </div><!-- CTA Buttons -->
+      <div class="flex items-center gap-3">
+       <a href="#abstract" class="hidden sm:inline-flex px-4 py-2 text-sm font-semibold text-emerald-900 border-2 border-emerald-700 rounded-lg hover:bg-emerald-50 transition-colors"> Submit Abstract </a> <a href="https://conference.frappehub.com/event/103/registrations/" class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg shadow-orange-500/30 button-premium relative"> <span class="relative z-10">Register</span> </a> <button id="mobile-menu-btn" class="lg:hidden p-2 text-stone-700 hover:text-emerald-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg></button>
+      </div>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-stone-200">
+     <div class="px-4 py-4 space-y-3 max-h-96 overflow-y-auto">
+      <a href="#home" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Home</a> <a href="#about" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">About</a> <a href="#topics" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Topics</a> <a href="#speakers" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Speakers</a> <a href="#publication" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Publication</a> <a href="#fees" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Fees</a> <a href="#dates" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Dates</a> <a href="#past-conferences" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Past Conferences</a> <a href="#abstract" class="block py-3 px-4 text-white bg-emerald-700 rounded-lg font-semibold text-center">Submit Abstract</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="relative min-h-screen flex items-center hero-pattern pt-20 overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+     <div class="absolute top-20 right-10 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-20 left-10 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Content -->
+      <div class="fade-in-up text-white">
+       <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm rounded-full mb-6 border border-white/20">
+        <span class="w-2.5 h-2.5 bg-orange-400 rounded-full animate-pulse"></span> <span class="text-sm font-semibold">6th International Edition</span>
+       </div>
+       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4"><span id="hero-conf-title">ICoBiomasSE</span> <span class="block text-orange-300">2026</span></h1>
+       <h2 class="text-2xl sm:text-3xl font-light mb-8 text-white/95 leading-relaxed italic" id="hero-tagline">Advancing Circular Bioeconomy through Biomass Utilisation and Waste Valorisation</h2>
+       <div class="flex flex-col sm:flex-row items-start gap-4 mb-10">
+        <div class="flex items-center gap-3 bg-white/10 backdrop-blur px-4 py-3 rounded-lg border border-white/20">
+         <svg class="w-5 h-5 text-orange-300" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+         <div class="text-sm">
+          <div class="text-white/70 text-xs">
+           Event Date
+          </div>
+          <div class="font-semibold" id="hero-dates">
+           2–3 September 2026
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center gap-3 bg-white/10 backdrop-blur px-4 py-3 rounded-lg border border-white/20">
+         <svg class="w-5 h-5 text-orange-300" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+         <div class="text-sm">
+          <div class="text-white/70 text-xs">
+           Venue
+          </div>
+          <div class="font-semibold" id="hero-venue">
+            Penang Waterfront Convention Centre (PWCC), Malaysia
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="flex flex-wrap gap-4 mb-12">
+        <a href="#abstract" class="button-premium group relative px-7 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all shadow-xl shadow-orange-500/30 flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+         </svg> Submit Abstract </a> <a href="https://conference.frappehub.com/event/103/registrations/" class="group relative px-7 py-3 bg-white/20 text-white font-bold rounded-lg border-2 border-white/40 hover:bg-white/30 transition-all backdrop-blur-sm flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+         </svg> Register Now </a>
+       </div>
+       <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
+        <div>
+         <div class="text-4xl font-bold text-orange-300">
+          6th
+         </div>
+         <div class="text-sm text-white/70 mt-1">
+          Edition
+         </div>
+        </div>
+        <div>
+         <div class="text-4xl font-bold text-orange-300">
+          50+
+         </div>
+         <div class="text-sm text-white/70 mt-1">
+          Countries
+         </div>
+        </div>
+        <div>
+         <div class="text-4xl font-bold text-orange-300">
+          500+
+         </div>
+         <div class="text-sm text-white/70 mt-1">
+          Researchers
+         </div>
+        </div>
+       </div>
+      </div><!-- Right Side Card -->
+      <div class="fade-in-up stagger-2">
+       <div class="card-premium rounded-2xl p-8 md:p-10 border-2 border-white/30">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl -z-10 opacity-5"></div>
+        <div class="flex items-center gap-3 mb-8 pb-6 border-b border-stone-200">
+         <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-500 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+         </div>
+         <h3 class="text-xl font-bold text-stone-900">Conference Highlights</h3>
+        </div>
+        <div class="space-y-4">
+         <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-emerald-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+           <div class="font-semibold text-stone-900">
+            SCOPUS Indexed Publication
+           </div>
+           <div class="text-sm text-stone-600">
+            Springer Book Series: Green Energy and Technology
+           </div>
+          </div>
+         </div>
+         <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-emerald-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+           <div class="font-semibold text-stone-900">
+            Hybrid Mode
+           </div>
+           <div class="text-sm text-stone-600">
+            Participate Online or In-Person
+           </div>
+          </div>
+         </div>
+         <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-emerald-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+           <div class="font-semibold text-stone-900">
+            CPD/CEU Credits
+           </div>
+           <div class="text-sm text-stone-600">
+            MBOT &amp; BEM Accreditation
+           </div>
+          </div>
+         </div>
+         <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-emerald-700 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+           <div class="font-semibold text-stone-900">
+            Peer-Reviewed Process
+           </div>
+           <div class="text-sm text-stone-600">
+            Double-blind review by experts
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-stone-200">
+         <div class="flex items-center justify-between">
+          <div>
+           <div class="text-xs text-stone-500 uppercase tracking-wide">
+            Early Bird Deadline
+           </div>
+           <div class="text-2xl font-bold text-emerald-700" id="early-bird-date">
+            31 May 2026
+           </div>
+          </div>
+          <div class="p-3 bg-orange-100 rounded-lg">
+           <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+           </svg>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white text-center">
+     <div class="text-xs opacity-75 mb-2">
+      Scroll to explore
+     </div>
+     <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+     </svg>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full text-emerald-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-emerald-700 rounded-full"></span> About the Conference
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8"><span class="section-header">A Premier Platform for Biomass Innovation</span></h2>
+      <p class="text-lg md:text-xl text-stone-700 leading-relaxed max-w-4xl mb-8">The 6th International Conference on Biomass Utilization &amp; Sustainable Energy (ICoBiomasSE 2026) is a prestigious global platform dedicated to advancing circular bioeconomy through cutting-edge biomass research, innovative conversion technologies, and sustainable energy transitions. This conference brings together leading researchers, industry professionals, policymakers, and postgraduate students to share groundbreaking discoveries, foster international collaborations, and accelerate the decarbonisation of our global economy.</p>
+      <p class="text-lg text-stone-600 leading-relaxed max-w-4xl">With publication opportunities in SCOPUS-indexed proceedings, comprehensive peer-review processes, and recognition from prestigious engineering bodies, ICoBiomasSE 2026 stands as a beacon of academic excellence and innovation in biomass utilization and renewable energy systems.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-premium rounded-xl p-6 text-center">
+       <div class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <div class="text-3xl font-bold text-emerald-700 mb-2">
+        6th
+       </div>
+       <div class="font-semibold text-stone-900">
+        Edition
+       </div>
+       <div class="text-sm text-stone-600 mt-2">
+        Continuing excellence since 2015
+       </div>
+      </div>
+      <div class="card-premium rounded-xl p-6 text-center">
+       <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        </svg>
+       </div>
+       <div class="text-3xl font-bold text-blue-700 mb-2">
+        50+
+       </div>
+       <div class="font-semibold text-stone-900">
+        Countries
+       </div>
+       <div class="text-sm text-stone-600 mt-2">
+        Global participation
+       </div>
+      </div>
+      <div class="card-premium rounded-xl p-6 text-center">
+       <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+       </div>
+       <div class="text-3xl font-bold text-orange-600 mb-2">
+        SCOPUS
+       </div>
+       <div class="font-semibold text-stone-900">
+        Indexed
+       </div>
+       <div class="text-sm text-stone-600 mt-2">
+        Springer Green Energy Series
+       </div>
+      </div>
+      <div class="card-premium rounded-xl p-6 text-center">
+       <div class="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <div class="text-3xl font-bold text-teal-700 mb-2">
+        Hybrid
+       </div>
+       <div class="font-semibold text-stone-900">
+        Format
+       </div>
+       <div class="text-sm text-stone-600 mt-2">
+        In-person &amp; Virtual participation
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Topics Section -->
+   <section id="topics" class="py-20 md:py-28 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full text-orange-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-orange-700 rounded-full"></span> Conference Topics
+       </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">8 Research Tracks</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Comprehensive coverage of biomass technologies, circular bioeconomy, sustainable energy, and advanced analytical approaches</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Topic Cards -->
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Sustainable Biomass Resources</h3>
+       <p class="text-sm text-stone-600">Decarbonising the economy through sustainable sourcing</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Biomass Conversion Technologies</h3>
+       <p class="text-sm text-stone-600">Advanced conversion to intermediates and products</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Bioenergy &amp; Biofuels</h3>
+       <p class="text-sm text-stone-600">Energy conversion and renewable fuel production</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-teal-600 to-teal-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Bioeconomy &amp; Policies</h3>
+       <p class="text-sm text-stone-600">Sustainability, impacts and policy frameworks</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Bioenergy Integration</h3>
+       <p class="text-sm text-stone-600">Systems integration and energy networks</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3v2.25m0 0v2.25m0-2.25h2.25m-2.25 0H7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25v-9m3.75 9v-6.75m-7.5 6.75v-2.25" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Bio-Separation Technologies</h3>
+       <p class="text-sm text-stone-600">Advanced separation methods in biomass conversion</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-pink-600 to-pink-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">AI in Biomass &amp; Energy</h3>
+       <p class="text-sm text-stone-600">Machine learning and artificial intelligence applications</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 group">
+       <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">Techno-Economic Analysis</h3>
+       <p class="text-sm text-stone-600">Economics and technical feasibility assessment</p>
+      </div>
+      </div>
+     </div>
+    </section><!-- Keynote Speakers Section -->
+   <section id="speakers" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-blue-700 rounded-full"></span> Distinguished Speakers
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">Keynote Speakers</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Leading international experts sharing their insights on biomass innovation and sustainable energy</p>
+     </div>
+     <div class="flex flex-col items-center justify-center py-16">
+      <div class="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-8">
+       <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg>
+      </div>
+      <h3 class="text-3xl font-display font-bold text-stone-900 mb-4 text-center">Keynote Speakers</h3>
+      <p class="text-xl text-stone-600 text-center max-w-2xl">Distinguished speakers from leading research institutions and organizations will be announced soon. Stay tuned for exciting confirmations!</p>
+      <div class="mt-8 pt-8 border-t border-stone-200 w-full max-w-2xl">
+       <p class="text-center text-stone-500 text-sm"><span class="font-semibold text-stone-700">Announcement Coming Soon</span> - Check back regularly for keynote speaker details</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Publication Section -->
+   <section id="publication" class="py-20 md:py-28 bg-gradient-to-br from-stone-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Content -->
+      <div class="fade-in-up">
+       <div class="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full text-orange-800 text-sm font-semibold mb-6">
+        <span class="w-1.5 h-1.5 bg-orange-700 rounded-full"></span> Publication Opportunity
+       </div>
+       <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8"><span class="section-header">SCOPUS Indexed</span></h2>
+       <p class="text-lg text-stone-700 leading-relaxed mb-6">All accepted papers will be published in the prestigious <span class="font-semibold">Springer Book Series: Green Energy and Technology</span>, ensuring global visibility and academic impact.</p>
+       <div class="space-y-4 mb-8">
+        <div class="flex items-start gap-4">
+         <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+         </div>
+         <div>
+          <div class="font-semibold text-stone-900">
+           Peer-Reviewed Process
+          </div>
+          <div class="text-stone-600">
+           Double-blind review by international experts
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+         </div>
+         <div>
+          <div class="font-semibold text-stone-900">
+           SCOPUS Indexing
+          </div>
+          <div class="text-stone-600">
+           Maximum visibility and citation impact
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+         </div>
+         <div>
+          <div class="font-semibold text-stone-900">
+           DOI Assignment
+          </div>
+          <div class="text-stone-600">
+           Permanent digital object identifier
+          </div>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+         </div>
+         <div>
+          <div class="font-semibold text-stone-900">
+           Springer Legacy
+          </div>
+          <div class="text-stone-600">
+           Leading publisher in engineering &amp; science
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mb-8 p-6 bg-white rounded-xl border-2 border-orange-200">
+        <div class="font-semibold text-stone-900 mb-4">
+         Previous Editions Published
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-sm">
+  <div>
+    📚 <a href="https://link.springer.com/book/10.1007/978-981-99-1695-5" target="_blank" rel="noopener noreferrer">ICoBiomasSE 2022 (2nd Edition)</a>
+  </div>
+  <div>
+    📚 <a href="https://link.springer.com/book/10.1007/978-981-99-9164-8" target="_blank" rel="noopener noreferrer">ICoBiomasSE 2023 (3rd Edition)</a>
+  </div>
+  <div>
+    📚 <a href="https://link.springer.com/book/10.1007/978-981-96-3785-0" target="_blank" rel="noopener noreferrer">ICoBiomasSE 2024 (4th Edition)</a>
+  </div>
+  <div>
+    📚 <a href="https://conference.frappehub.com/event/90/program" target="_blank" rel="noopener noreferrer">ICoBiomasSE 2025 (5th Edition) - Not yet published</a>
+  </div>
+</div>
+       </div><a href="#abstract" class="inline-flex items-center gap-2 px-7 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg button-premium"> Submit Your Paper Now 
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg></a>
+ </div><!-- Visual -->
+      <div class="fade-in-up stagger-2">
+       <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-200 to-orange-100 rounded-2xl blur-3xl opacity-50"></div>
+        <div class="relative bg-white rounded-2xl p-8 md:p-10 shadow-2xl border border-orange-100">
+         <div class="flex items-center justify-center mb-8"><img src="https://imgur.com/fbdnYVW.png" alt="Springer Book Series Logo" loading="lazy" class="w-56 h-56 object-contain" onerror="console.error('Logo failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Logo unavailable';">
+         </div>
+         <h3 class="text-2xl font-bold text-center text-stone-900 mb-6">Springer Book Series</h3>
+         <div class="space-y-4 mb-8">
+          <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
+           <div class="text-xs text-stone-500 uppercase tracking-wide font-semibold mb-1">
+            Series
+           </div>
+           <div class="font-bold text-stone-900">
+            Green Energy and Technology
+           </div>
+          </div>
+          <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
+           <div class="text-xs text-stone-500 uppercase tracking-wide font-semibold mb-1">
+            Indexing
+           </div>
+           <div class="font-bold text-stone-900">
+            SCOPUS
+           </div>
+          </div>
+          <div class="p-4 bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg border-2 border-orange-200">
+           <div class="text-xs text-orange-600 uppercase tracking-wide font-semibold mb-1">
+            Reach
+           </div>
+           <div class="font-bold text-orange-900">
+            Global Academic Community
+           </div>
+          </div>
+         </div>
+         <div class="text-center">
+          <p class="text-sm text-stone-600"><span class="font-semibold text-emerald-700">Trusted by researchers worldwide</span> for quality publications</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    </section><!-- Pricing Section -->
+   <section id="fees" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full text-teal-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-teal-700 rounded-full"></span> Conference Fees
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">Affordable Participation</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Flexible pricing for researchers, professionals, and students with special discounts for members and early birds</p>
+     </div><!-- Early Bird Notice -->
+     <div class="mb-12 p-6 bg-gradient-to-r from-orange-50 to-amber-50 border-l-4 border-orange-500 rounded-lg">
+      <div class="flex items-center gap-3 mb-2">
+       <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg><span class="font-bold text-orange-900">Early Bird Deadline: 31 May 2026</span>
+      </div>
+      <p class="text-stone-700 text-sm">Register before the deadline to receive discounted rates and secure your spot</p>
+     </div><!-- Pricing Table -->
+     <div class="mb-12 bg-white rounded-xl overflow-hidden shadow-lg border border-stone-200">
+      <div class="p-6 bg-gradient-to-r from-emerald-50 to-orange-50 border-b border-stone-200">
+       <h3 class="text-2xl font-bold text-stone-900">Conference Fee Table</h3>
+      </div>
+      <div class="overflow-x-auto">
+       <table class="w-full text-sm border-collapse">
+        <thead>
+         <tr class="bg-gradient-to-r from-emerald-700 to-emerald-800 text-white">
+          <th class="px-4 py-3 text-left font-bold border border-emerald-600">Registration Type</th>
+          <th colspan="4" class="px-4 py-3 text-center font-bold border border-emerald-600">Physical</th>
+          <th colspan="4" class="px-4 py-3 text-center font-bold border border-emerald-600">Online</th>
+         </tr>
+         <tr class="bg-emerald-600 text-white">
+          <th class="px-4 py-3 text-left font-semibold border border-emerald-500"></th>
+          <th colspan="2" class="px-4 py-3 text-center font-semibold border border-emerald-500">Early Bird</th>
+          <th colspan="2" class="px-4 py-3 text-center font-semibold border border-emerald-500">Normal</th>
+          <th colspan="2" class="px-4 py-3 text-center font-semibold border border-emerald-500">Early Bird</th>
+          <th colspan="2" class="px-4 py-3 text-center font-semibold border border-emerald-500">Normal</th>
+         </tr>
+         <tr class="bg-emerald-500 text-white">
+          <th class="px-4 py-3 text-left font-semibold border border-emerald-400"></th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Local (RM)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Intl (USD)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Local (RM)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Intl (USD)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Local (RM)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Intl (USD)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Local (RM)</th>
+          <th class="px-4 py-2 text-center font-semibold border border-emerald-400 text-xs">Intl (USD)</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr class="bg-white hover:bg-orange-50 transition-colors border-b border-stone-200">
+          <td class="px-4 py-4 font-semibold text-stone-900 border border-stone-200">Oral/Poster with Publication</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">950</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">300</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">1,050</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">350</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">800</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">250</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">950</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">300</td>
+         </tr>
+         <tr class="bg-stone-50 hover:bg-orange-50 transition-colors border-b border-stone-200">
+          <td class="px-4 py-4 font-semibold text-stone-900 border border-stone-200">Oral/Poster without Publication</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">500</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">170</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">550</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">220</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">450</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">150</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">500</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">170</td>
+         </tr>
+         <tr class="bg-white hover:bg-orange-50 transition-colors border-b border-stone-200">
+          <td class="px-4 py-4 font-semibold text-stone-900 border border-stone-200">Listener</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">400</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">100</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">400</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">100</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">100</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">30</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">100</td>
+          <td class="px-4 py-4 text-center text-stone-700 font-semibold border border-stone-200">30</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="p-4 bg-stone-50 border-t border-stone-200 text-sm text-stone-600">
+       <p><span class="font-semibold text-stone-900">Note:</span> All prices are in Malaysian Ringgit (RM) for local rates and US Dollars (USD) for international rates. Early bird rates apply until 31 May 2026. NO REFUND AFTER PAYMENT.</p>
+      </div>
+     </div><!-- Discounts -->
+     <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">CoEBU Members</h3>
+       <p class="text-orange-600 font-semibold text-lg mb-1">Online RM 560 | Physical RM 750</p>
+       <p class="text-sm text-stone-600">Special price for Centre of Excellence on Biomass Utilization members</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-stone-900 mb-2">UniMAP Staff</h3>
+       <p class="text-orange-600 font-semibold text-lg mb-1">Online RM 720 | Physical RM 850</p>
+       <p class="text-sm text-stone-600">Universiti Malaysia Perlis employee discount</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+        </svg>
+     </div>
+     <div class="text-center">
+      <a href="#register" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white font-bold rounded-lg hover:from-emerald-800 hover:to-emerald-900 transition-all shadow-lg">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+       </svg> Register Now </a>
+    </div>
+   </section><!-- Timeline Section -->
+   <section id="dates" class="py-20 md:py-28 bg-gradient-to-br from-emerald-50 to-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full text-emerald-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-emerald-700 rounded-full"></span> Key Timeline
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">Important Dates</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Mark your calendar for these critical submission and registration deadlines</p>
+     </div><!-- Timeline -->
+     <div class="grid md:grid-cols-5 gap-0 relative">
+      <div class="timeline-item text-center">
+       <div class="timeline-dot"></div>
+       <div class="pt-8">
+        <div class="card-premium rounded-lg p-6 inline-block w-full">
+         <div class="text-4xl font-bold text-orange-600 mb-2">
+          01
+         </div>
+         <div class="text-xs text-stone-500 uppercase tracking-wide mb-1">
+          Abstract Submission
+         </div>
+         <div class="font-bold text-stone-900" id="timeline-date-1">
+          2 May 2026
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="timeline-item text-center">
+       <div class="timeline-dot"></div>
+       <div class="pt-8">
+        <div class="card-premium rounded-lg p-6 inline-block w-full">
+         <div class="text-4xl font-bold text-blue-600 mb-2">
+          02
+         </div>
+         <div class="text-xs text-stone-500 uppercase tracking-wide mb-1">
+          Acceptance Notification
+         </div>
+         <div class="font-bold text-stone-900" id="timeline-date-2">
+          31 May 2026
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="timeline-item text-center">
+       <div class="timeline-dot"></div>
+       <div class="pt-8">
+        <div class="card-premium rounded-lg p-6 inline-block w-full">
+         <div class="text-4xl font-bold text-emerald-600 mb-2">
+          03
+         </div>
+         <div class="text-xs text-stone-500 uppercase tracking-wide mb-1">
+          Early Bird Registration
+         </div>
+         <div class="font-bold text-stone-900" id="timeline-date-3">
+          31 May 2026
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="timeline-item text-center">
+       <div class="timeline-dot"></div>
+       <div class="pt-8">
+        <div class="card-premium rounded-lg p-6 inline-block w-full">
+         <div class="text-4xl font-bold text-purple-600 mb-2">
+          04
+         </div>
+         <div class="text-xs text-stone-500 uppercase tracking-wide mb-1">
+          Full Paper Submission
+         </div>
+         <div class="font-bold text-stone-900" id="timeline-date-4">
+          31 July 2026
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="timeline-item text-center">
+       <div class="timeline-dot"></div>
+       <div class="pt-8">
+        <div class="card-premium rounded-lg p-6 inline-block w-full bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-300">
+         <div class="text-4xl font-bold text-orange-600 mb-2">
+          05
+         </div>
+         <div class="text-xs text-orange-700 uppercase tracking-wide font-semibold mb-1">
+          Conference Date
+         </div>
+         <div class="font-bold text-orange-900 text-lg" id="timeline-date-5">
+          2–3 September 2026
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div> </section><!-- Past Conferences Section -->
+   <section id="past-conferences" class="py-20 md:py-28 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-blue-700 rounded-full"></span> Conference History
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">Past Conferences</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Explore the success and impact of previous ICoBiomasSe editions</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- 1st Edition -->
+      <div class="card-premium rounded-xl overflow-hidden group hover:shadow-2xl transition-all">
+       <div class="relative h-40 bg-gradient-to-br from-emerald-600 to-emerald-700 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+         <svg class="w-full h-full" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+           <pattern id="pattern1" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="white" opacity="0.5" />
+           </pattern>
+          </defs><rect width="400" height="200" fill="url(#pattern1)" />
+         </svg>
+        </div>
+        <div class="relative text-center">
+         <div class="text-5xl font-display font-bold text-white mb-2">
+          1st
+         </div>
+         <div class="text-white/90 font-semibold">
+          Edition
+         </div>
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-3">ICoBiomasSe 2020</h3>
+        <div class="space-y-2 mb-6 text-sm text-stone-600">
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5H3v10a2 2 0 002 2h14a2 2 0 002-2V7h-3v1a1 1 0 102 0V7h1v10H4V7h2v1a1 1 0 102 0V7z" />
+          </svg><span>Theme: Biomass Innovation for Sustainable Development</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Foundation Conference</span>
+         </div>
+        </div><a href="https://icobiomasse.wixsite.com/icobiomasse2020" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors text-sm"> Learn More 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div><!-- 2nd Edition -->
+      <div class="card-premium rounded-xl overflow-hidden group hover:shadow-2xl transition-all">
+       <div class="relative h-40 bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+         <svg class="w-full h-full" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+           <pattern id="pattern2" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="white" opacity="0.5" />
+           </pattern>
+          </defs><rect width="400" height="200" fill="url(#pattern2)" />
+         </svg>
+        </div>
+        <div class="relative text-center">
+         <div class="text-5xl font-display font-bold text-white mb-2">
+          2nd
+         </div>
+         <div class="text-white/90 font-semibold">
+          Edition
+         </div>
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-3">ICoBiomasSE 2022</h3>
+        <div class="space-y-2 mb-6 text-sm text-stone-600">
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Theme: Emerging Technology For Future Sustainability</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Virtual conference (pandemic)</span>
+         </div>
+        </div><a href="https://submit.confbay.com/conf/icobiomasse2022" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors text-sm"> Learn More 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div><!-- 3rd Edition -->
+      <div class="card-premium rounded-xl overflow-hidden group hover:shadow-2xl transition-all">
+       <div class="relative h-40 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+         <svg class="w-full h-full" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+           <pattern id="pattern3" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="white" opacity="0.5" />
+           </pattern>
+          </defs><rect width="400" height="200" fill="url(#pattern3)" />
+         </svg>
+        </div>
+        <div class="relative text-center">
+         <div class="text-5xl font-display font-bold text-white mb-2">
+          3rd
+         </div>
+         <div class="text-white/90 font-semibold">
+          Edition
+         </div>
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-3">ICoBiomasSE 2023</h3>
+        <div class="space-y-2 mb-6 text-sm text-stone-600">
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Theme: Advancing Circular Economy Towards Academic-Industrial Sustainability</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-orange-600" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>World Trade Centre Kuala Lumpur</span>
+         </div>
+        </div><a href="https://conference.frappehub.com/event/42/overview" class="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors text-sm"> Learn More 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div><!-- 4th Edition -->
+      <div class="card-premium rounded-xl overflow-hidden group hover:shadow-2xl transition-all">
+       <div class="relative h-40 bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+         <svg class="w-full h-full" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+           <pattern id="pattern4" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="white" opacity="0.5" />
+           </pattern>
+          </defs><rect width="400" height="200" fill="url(#pattern4)" />
+         </svg>
+        </div>
+        <div class="relative text-center">
+         <div class="text-5xl font-display font-bold text-white mb-2">
+          4th
+         </div>
+         <div class="text-white/90 font-semibold">
+          Edition
+         </div>
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-3">ICoBiomasSE 2024</h3>
+        <div class="space-y-2 mb-6 text-sm text-stone-600">
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-teal-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Theme: Nurturing Sustainability through Net Zero Emissions, Circular Economy, and Academia-Industry Collaboration</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-teal-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Bertam Resort & Water Park, Pulau Pinang</span>
+         </div>
+        </div><a href="https://conference.frappehub.com/event/69/" class="inline-flex items-center gap-2 px-4 py-2 bg-teal-700 text-white font-semibold rounded-lg hover:bg-teal-800 transition-colors text-sm"> Learn More 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div><!-- 5th Edition -->
+      <div class="card-premium rounded-xl overflow-hidden group hover:shadow-2xl transition-all">
+       <div class="relative h-40 bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+         <svg class="w-full h-full" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+           <pattern id="pattern5" x="0" y="0" width="40" height="40" patternunits="userSpaceOnUse">
+            <circle cx="20" cy="20" r="2" fill="white" opacity="0.5" />
+           </pattern>
+          </defs><rect width="400" height="200" fill="url(#pattern5)" />
+         </svg>
+        </div>
+        <div class="relative text-center">
+         <div class="text-5xl font-display font-bold text-white mb-2">
+          5th
+         </div>
+         <div class="text-white/90 font-semibold">
+          Edition
+         </div>
+        </div>
+       </div>
+       <div class="p-6">
+        <h3 class="text-xl font-bold text-stone-900 mb-3">ICoBiomasSE 2025</h3>
+        <div class="space-y-2 mb-6 text-sm text-stone-600">
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-purple-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Theme: Harnessing Biomass for a Sustainable Circular Economy: Innovation in Energy Transition</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-purple-700" fill="currentColor" viewbox="0 0 24 24">
+           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z" />
+          </svg><span>Putra World Trade Centre, Kuala Lumpur</span>
+         </div>
+        </div><a href="https://conference.frappehub.com/event/90/" class="inline-flex items-center gap-2 px-4 py-2 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition-colors text-sm"> Learn More 
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+         </svg></a>
+       </div>
+      </div>
+     </div><!-- Statistics -->
+     <div class="mt-16 grid md:grid-cols-3 gap-6">
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="text-4xl font-bold text-emerald-700 mb-2">
+        5
+       </div>
+       <div class="font-semibold text-stone-900">
+        Successful Editions
+       </div>
+       <p class="text-sm text-stone-600 mt-2">From 2015 to 2024</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="text-4xl font-bold text-blue-700 mb-2">
+        1,000+
+       </div>
+       <div class="font-semibold text-stone-900">
+        Total Researchers
+       </div>
+       <p class="text-sm text-stone-600 mt-2">Across all editions</p>
+      </div>
+      <div class="card-premium rounded-lg p-6 text-center">
+       <div class="text-4xl font-bold text-orange-600 mb-2">
+        50+
+       </div>
+       <div class="font-semibold text-stone-900">
+        Countries Represented
+       </div>
+       <p class="text-sm text-stone-600 mt-2">Global collaboration</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- CPD Section -->
+   <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-purple-700 rounded-full"></span> Professional Recognition
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">CPD Credits</span></h2>
+      <p class="text-xl text-stone-600 max-w-3xl">Earn professional development credits recognized by leading engineering bodies</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- MBOT CPD -->
+      <div class="card-premium rounded-xl p-8 border-2 border-stone-200 hover:border-purple-300">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-stone-900">6 CPD Points</h3>
+         <p class="text-purple-700 font-semibold">For MBOT Members</p>
+        </div>
+       </div>
+       <p class="text-stone-600 text-sm leading-relaxed mb-4">Malaysian Board of Technologists (MBOT) members are eligible to earn 6 CPD points upon attendance and participation at the conference.</p>
+       <div class="flex items-center justify-center w-56 h-28 bg-white rounded-lg p-2"><img src="https://imgur.com/ZvtJDXI.png" alt="MBOT Logo" loading="lazy" class="h-full object-contain" onerror="console.error('Image failed to load:', this.src); this.style.background='#f3f4f6'; this.alt='MBOT Logo unavailable';">
+       </div>
+      </div><!-- BEM CPD -->
+      <div class="card-premium rounded-xl p-8 border-2 border-stone-200 hover:border-blue-300">
+       <div class="flex items-start gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="text-2xl font-bold text-stone-900">10 CPD Points</h3>
+         <p class="text-blue-700 font-semibold">For BEM Members (Upon Approval)</p>
+        </div>
+       </div>
+       <p class="text-stone-600 text-sm leading-relaxed mb-4">Board of Engineers Malaysia (BEM) members are eligible to earn 10 CPD points upon approval and attendance at the conference.</p>
+       <div class="flex items-center justify-center w-56 h-28 bg-white rounded-lg p-2"><img src="https://imgur.com/M5bclxL.png" alt="BEM Logo" loading="lazy" class="h-full object-contain" onerror="console.error('Image failed to load:', this.src); this.style.background='#f3f4f6'; this.alt='BEM Logo unavailable';">
+       </div>
+      </div>
+     </div>
+     <div class="p-8 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-xl border border-emerald-200">
+      <div class="flex items-start gap-4">
+       <svg class="w-6 h-6 text-emerald-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg>
+       <div>
+        <p class="text-stone-700 text-sm"><span class="font-semibold">Note:</span> CPD/CEU credits are awarded upon full conference attendance. Participants must register and attend sessions to be eligible for credit recognition. BEM approval is pending and will be confirmed closer to the conference date.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+  </section><!-- Organizers Section -->
+   <section class="py-20 md:py-28 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-800 text-sm font-semibold mb-6">
+       <span class="w-1.5 h-1.5 bg-blue-700 rounded-full"></span> Partnerships
+      </div>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"><span class="section-header">Organizers &amp; Partners</span></h2>
+     </div><!-- Organizers -->
+     <div class="mb-16">
+      <h3 class="text-center text-stone-500 text-sm font-semibold uppercase tracking-wider mb-8">Organized By</h3>
+      <div class="flex flex-wrap justify-center items-center gap-8">
+       <div class="card-premium rounded-xl p-8 flex items-center justify-center"><img src="https://imgur.com/zCJA6QA.png" alt="UniMAP Logo" loading="lazy" class="h-24 object-contain" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+       </div>
+       <div class="card-premium rounded-xl p-8 flex items-center justify-center"><img src="https://imgur.com/I6fAqFr.png" alt="CoEBU Logo" loading="lazy" class="h-24 object-contain" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+       </div>
+      </div>
+     </div><!-- Co-Organizers -->
+     <div class="mb-16">
+      <h3 class="text-center text-stone-500 text-sm font-semibold uppercase tracking-wider mb-8">Co-Organizers</h3>
+      <div class="flex flex-wrap justify-center items-center gap-6">
+       <div class="card-premium rounded-lg p-6 flex items-center justify-center"><img src="https://imgur.com/tKEILdn.png" alt="GTEST Logo" loading="lazy" class="h-16 object-contain" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+       </div>
+      </div>
+     </div><!-- Sponsors -->
+     <div>
+      <h3 class="text-center text-stone-500 text-sm font-semibold uppercase tracking-wider mb-8">Sponsors &amp; Supporters</h3>
+      <div class="flex flex-wrap justify-center items-center gap-6">
+       <div class="max-w-3xl mx-auto">
+        <div class="card-premium rounded-xl p-8 bg-gradient-to-br from-emerald-50 to-orange-50 border-2 border-orange-300">
+         <div class="text-center mb-8">
+          <h4 class="text-2xl font-bold text-stone-900 mb-4">Conference is Open for Sponsorship</h4>
+          <p class="text-stone-600 mb-6">Support the advancement of circular bioeconomy and gain exceptional brand visibility while enjoying significant tax advantages.</p>
+         </div>
+         <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded-lg p-6 mb-8">
+          <div class="flex items-start gap-3">
+           <svg class="w-6 h-6 text-yellow-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+           </svg>
+           <div>
+            <div class="font-bold text-yellow-900 mb-2">
+             Tax-Deductible Sponsorship
+            </div>
+            <p class="text-sm text-yellow-800">As an organized entity under Universiti Malaysia Perlis (a public institution), sponsorship contributions are eligible for income tax exemption under Malaysian tax regulations. Please consult with your finance and tax advisors to confirm eligibility for your organization.</p>
+           </div>
+          </div>
+         </div>
+         <div class="space-y-3 mb-8">
+          <div class="flex items-start gap-3">
+           <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+           </svg><span class="text-stone-700"><span class="font-semibold">Global Brand Exposure</span> - Reach 500+ researchers from 50+ countries</span>
+          </div>
+          <div class="flex items-start gap-3">
+           <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+           </svg><span class="text-stone-700"><span class="font-semibold">SCOPUS-Indexed Publication</span> - Associated with Springer Green Energy Series</span>
+          </div>
+          <div class="flex items-start gap-3">
+           <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+           </svg><span class="text-stone-700"><span class="font-semibold">Industry Leadership</span> - Position your organization as a sustainability innovator</span>
+          </div>
+          <div class="flex items-start gap-3">
+           <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+           </svg><span class="text-stone-700"><span class="font-semibold">Customized Packages</span> - Flexible sponsorship tiers tailored to your needs</span>
+          </div>
+         <div class="flex justify-center">
+  <a href="mailto:khairulfarihan@unimap.edu.my" class="button-premium px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg shadow-orange-500/30 flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+    Inquire About Sponsorship
+  </a>
+</div>
+        </div>
+       </div>
+      </div>
+    </div>
+    </section><!-- CTA Section -->
+   <section id="abstract" class="py-20 md:py-28 bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+     <div class="absolute top-0 right-1/4 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+     <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">Ready to Share Your <span class="text-orange-300">Research?</span></h2>
+     <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">Join hundreds of researchers publishing in a SCOPUS-indexed platform. Submit your abstract today and be part of the global biomass innovation community.</p>
+     <div class="flex flex-wrap justify-center gap-4 mb-12">
+     <a href="https://conference.frappehub.com/event/103/registrations/" target="_blank" rel="noopener noreferrer" class="group relative px-8 py-4 bg-white/20 text-white font-bold rounded-lg border-2 border-white/40 hover:bg-white/30 transition-all backdrop-blur-sm flex items-center gap-2">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+  </svg>
+  Submit | Register Now
+</a>
+     </div>
+     <div class="flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm pt-8 border-t border-white/20">
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-orange-300" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg><span>Peer-Reviewed Publication</span>
+      </div>
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-orange-300" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg><span>SCOPUS Indexed</span>
+      </div>
+      <div class="flex items-center gap-2">
+       <svg class="w-5 h-5 text-orange-300" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+       </svg><span>Hybrid Participation</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-stone-900 text-stone-400 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Brand -->
+      <div>
+       <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-lg overflow-hidden shadow-lg"><img src="https://imgur.com/sm30H0S.png" alt="ICoBiomasSe Logo" class="w-full h-full object-cover" loading="lazy" onerror="console.error('Logo failed to load:', this.src); this.parentElement.style.background='linear-gradient(135deg, #0d5e3d 0%, #0f3d5f 100%)'; this.style.display='none';">
+        </div>
+        <div>
+         <span class="text-white font-bold font-display">ICoBiomasSE</span> <span class="text-orange-400 font-semibold ml-1">2026</span>
+        </div>
+       </div>
+       <p class="text-sm leading-relaxed">The 6th International Conference on Biomass Utilization &amp; Sustainable Energy - A SCOPUS-indexed platform for advancing circular bioeconomy.</p>
+      </div><!-- Quick Links -->
+      <div>
+       <h4 class="text-white font-bold mb-4">Navigation</h4>
+       <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-orange-400 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-orange-400 transition-colors">About</a></li>
+        <li><a href="#topics" class="hover:text-orange-400 transition-colors">Topics</a></li>
+        <li><a href="#speakers" class="hover:text-orange-400 transition-colors">Speakers</a></li>
+       </ul>
+      </div><!-- Info -->
+      <div>
+       <h4 class="text-white font-bold mb-4">Information</h4>
+       <ul class="space-y-2 text-sm">
+        <li><a href="#publication" class="hover:text-orange-400 transition-colors">Publication</a></li>
+        <li><a href="#fees" class="hover:text-orange-400 transition-colors">Fees</a></li>
+        <li><a href="#dates" class="hover:text-orange-400 transition-colors">Dates</a></li>
+        <li><a href="#register" class="hover:text-orange-400 transition-colors">Register</a></li>
+       </ul>
+      </div><!-- Contact -->
+      <div>
+       <h4 class="text-white font-bold mb-4">Contact</h4>
+       <div class="space-y-3 text-sm">
+        <div class="flex items-start gap-2">
+         <svg class="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+         </svg><span id="footer-email">contact@icobiomasse2026.com</span>
+        </div>
+        <div class="flex items-start gap-2">
+         <svg class="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+         </svg><span id="footer-location">CoeBU, UniMAP, Perlis, Malaysia</span>
+        </div>
+       </div><!-- Social -->
+       <div class="flex gap-3 mt-6">
+        <a href="#" class="w-10 h-10 bg-stone-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+         </svg></a> <a href="#" class="w-10 h-10 bg-stone-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+         </svg></a>
+       </div>
+      </div>
+     </div>
+     <div class="pt-8 border-t border-stone-800 text-center text-sm">
+      <p>© 2026 ICoBiomasSE - 6th International Conference on Biomass Utilization &amp; Sustainable Energy. All rights reserved.</p>
+      <p class="mt-2 text-stone-500">Organized by Universiti Malaysia Perlis (UniMAP)</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      conference_title: 'ICoBiomasSE 2026',
+      conference_tagline: 'Advancing Circular Bioeconomy through Biomass Utilisation and Waste Valorisation',
+      event_dates: '2–3 September 2026',
+      venue_name: 'Penang Waterfront Convention Centre (PWCC)',
+      venue_city: 'Penang, Malaysia',
+      abstract_deadline: '2 May 2026',
+      acceptance_deadline: '31 May 2026',
+      early_bird_deadline: '31 May 2026',
+      paper_deadline: '31 July 2026',
+      contact_email: 'icobiomasse@unimap.edu.my',
+      organization_name: 'Universiti Malaysia Perlis (UniMAP)'
+    };
+
+    let config = { ...defaultConfig };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (newConfig) => {
+          config = { ...defaultConfig, ...newConfig };
+          updateUI();
+        },
+        mapToCapabilities: () => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (cfg) => new Map([
+          ['conference_title', cfg.conference_title || defaultConfig.conference_title],
+          ['conference_tagline', cfg.conference_tagline || defaultConfig.conference_tagline],
+          ['event_dates', cfg.event_dates || defaultConfig.event_dates],
+          ['venue_name', cfg.venue_name || defaultConfig.venue_name],
+          ['venue_city', cfg.venue_city || defaultConfig.venue_city],
+          ['abstract_deadline', cfg.abstract_deadline || defaultConfig.abstract_deadline],
+          ['acceptance_deadline', cfg.acceptance_deadline || defaultConfig.acceptance_deadline],
+          ['early_bird_deadline', cfg.early_bird_deadline || defaultConfig.early_bird_deadline],
+          ['paper_deadline', cfg.paper_deadline || defaultConfig.paper_deadline],
+          ['contact_email', cfg.contact_email || defaultConfig.contact_email],
+          ['organization_name', cfg.organization_name || defaultConfig.organization_name]
+        ])
+      });
+    }
+
+    function updateUI() {
+      // Hero section
+      const heroTitle = document.getElementById('hero-conf-title');
+      if (heroTitle) heroTitle.textContent = config.conference_title;
+
+      const heroTagline = document.getElementById('hero-tagline');
+      if (heroTagline) heroTagline.textContent = config.conference_tagline;
+
+      const heroDates = document.getElementById('hero-dates');
+      if (heroDates) heroDates.textContent = config.event_dates;
+
+      const heroVenue = document.getElementById('hero-venue');
+      if (heroVenue) heroVenue.textContent = `${config.venue_city}`;
+
+      const earlyBird = document.getElementById('early-bird-date');
+      if (earlyBird) earlyBird.textContent = config.early_bird_deadline;
+
+      // Timeline dates
+      const date1 = document.getElementById('timeline-date-1');
+      if (date1) date1.textContent = config.abstract_deadline;
+
+      const date2 = document.getElementById('timeline-date-2');
+      if (date2) date2.textContent = config.acceptance_deadline;
+
+      const date3 = document.getElementById('timeline-date-3');
+      if (date3) date3.textContent = config.early_bird_deadline;
+
+      const date4 = document.getElementById('timeline-date-4');
+      if (date4) date4.textContent = config.paper_deadline;
+
+      const date5 = document.getElementById('timeline-date-5');
+      if (date5) date5.textContent = config.event_dates;
+
+      // Footer
+      const footerEmail = document.getElementById('footer-email');
+      if (footerEmail) footerEmail.textContent = config.contact_email;
+
+      const footerLocation = document.getElementById('footer-location');
+      if (footerLocation) footerLocation.textContent = config.venue_city;
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (mobileMenu && !mobileMenuBtn?.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Initial UI update
+    updateUI();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d1ba64955dada55',t:'MTc3MTczMzU5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
