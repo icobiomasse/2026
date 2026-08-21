@@ -261,14 +261,58 @@
       <a href="#home" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Home</a> <a href="#about" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">About</a> <a href="#topics" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Topics</a> <a href="#speakers" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Speakers</a> <a href="#publication" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Publication</a> <a href="#fees" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Fees</a> <a href="#dates" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Dates</a> <a href="#past-conferences" class="block py-2 text-stone-700 hover:text-emerald-700 font-medium">Past Conferences</a> <a href="#abstract" class="block py-3 px-4 text-white bg-emerald-700 rounded-lg font-semibold text-center">Submit Abstract</a>
      </div>
     </div>
-   </nav><!-- Hero Section -->
-   <section id="home" class="relative min-h-screen flex items-center hero-pattern pt-20 overflow-hidden">
+   </nav>
+
+   <!-- Hero Section -->
+   <section id="home" class="relative min-h-screen flex flex-col justify-center hero-pattern pt-24 pb-16 overflow-hidden">
     <!-- Animated background elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
      <div class="absolute top-20 right-10 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl"></div>
      <div class="absolute bottom-20 left-10 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl"></div>
     </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+
+     <!-- Countdown Banner -->
+     <div id="countdown-banner" class="mb-10 p-4 sm:p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl fade-in-up">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+       <div class="flex items-center gap-3 text-white">
+        <span class="p-3 bg-orange-500/20 rounded-xl border border-orange-400/30 text-orange-300">
+         <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </span>
+        <div>
+         <h3 class="font-bold text-lg text-white">Event Countdown</h3>
+         <p class="text-xs text-stone-200">Time remaining until ICoBiomasSE 2026 starts</p>
+        </div>
+       </div>
+
+       <!-- Timer Units -->
+       <div class="flex items-center gap-2 sm:gap-4 text-center">
+        <div class="bg-stone-900/60 border border-white/10 rounded-xl px-3 py-2 min-w-[65px] sm:min-w-[75px]">
+         <span id="days" class="block text-2xl sm:text-3xl font-extrabold text-orange-400">00</span>
+         <span class="text-[10px] uppercase tracking-wider text-stone-300 font-semibold">Days</span>
+        </div>
+        <span class="text-2xl font-bold text-white/50">:</span>
+        <div class="bg-stone-900/60 border border-white/10 rounded-xl px-3 py-2 min-w-[65px] sm:min-w-[75px]">
+         <span id="hours" class="block text-2xl sm:text-3xl font-extrabold text-white">00</span>
+         <span class="text-[10px] uppercase tracking-wider text-stone-300 font-semibold">Hours</span>
+        </div>
+        <span class="text-2xl font-bold text-white/50">:</span>
+        <div class="bg-stone-900/60 border border-white/10 rounded-xl px-3 py-2 min-w-[65px] sm:min-w-[75px]">
+         <span id="minutes" class="block text-2xl sm:text-3xl font-extrabold text-white">00</span>
+         <span class="text-[10px] uppercase tracking-wider text-stone-300 font-semibold">Mins</span>
+        </div>
+        <span class="text-2xl font-bold text-white/50">:</span>
+        <div class="bg-stone-900/60 border border-white/10 rounded-xl px-3 py-2 min-w-[65px] sm:min-w-[75px]">
+         <span id="seconds" class="block text-2xl sm:text-3xl font-extrabold text-orange-400">00</span>
+         <span class="text-[10px] uppercase tracking-wider text-stone-300 font-semibold">Secs</span>
+        </div>
+       </div>
+      </div>
+     </div>
+
      <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div class="fade-in-up text-white">
@@ -300,7 +344,7 @@
            Venue
           </div>
           <div class="font-semibold" id="hero-venue">
-            Penang Waterfront Convention Centre (PWCC), Malaysia
+           Penang Waterfront Convention Centre (PWCC), Malaysia
           </div>
          </div>
         </div>
@@ -427,7 +471,7 @@
       </div>
      </div>
     </div><!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white text-center">
+    <div class="mt-12 animate-bounce text-white text-center">
      <div class="text-xs opacity-75 mb-2">
       Scroll to explore
      </div>
@@ -435,7 +479,8 @@
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
      </svg>
     </div>
-     </section><!-- Reviewer Recruitment Banner -->
+   </section><!-- Reviewer Recruitment Banner -->
+
    <div class="bg-gradient-to-r from-red-600 to-orange-600 border-b-4 border-red-700 z-40 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-6">
      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -453,7 +498,9 @@
       </div><a href="https://forms.gle/NkySVHQv6rHyPDyGA" class="px-6 py-2 bg-white text-red-600 hover:bg-red-50 rounded-lg font-bold text-sm transition-colors whitespace-nowrap flex-shrink-0 shadow-md">Register Interest</a>
      </div>
     </div>
-   </section><!-- About Section -->
+   </div>
+
+   <!-- About Section -->
    <section id="about" class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="mb-16">
@@ -750,7 +797,7 @@
             Series
            </div>
            <div class="font-bold text-stone-900">
-           Journal / Book Series
+            Journal / Book Series
            </div>
           </div>
           <div class="p-4 bg-stone-50 rounded-lg border border-stone-200">
@@ -894,12 +941,13 @@
         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24">
          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
         </svg>
+      </div>
+      <div class="text-center">
+       <a href="#register" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white font-bold rounded-lg hover:from-emerald-800 hover:to-emerald-900 transition-all shadow-lg">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+        </svg> Register Now </a>
      </div>
-     <div class="text-center">
-      <a href="#register" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-700 to-emerald-800 text-white font-bold rounded-lg hover:from-emerald-800 hover:to-emerald-900 transition-all shadow-lg">
-       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-       </svg> Register Now </a>
     </div>
    </section><!-- Timeline Section -->
    <section id="dates" class="py-20 md:py-28 bg-gradient-to-br from-emerald-50 to-stone-50">
@@ -1436,6 +1484,7 @@
     </div>
    </footer>
   </div>
+
   <script>
     // Default configuration
     const defaultConfig = {
@@ -1453,6 +1502,46 @@
     };
 
     let config = { ...defaultConfig };
+
+    // Live Countdown Timer
+    function initCountdown() {
+      // Event Target Date: September 1, 2026 (09:00 AM UTC+8)
+      const eventTargetDate = new Date('September 1, 2026 09:00:00 GMT+0800').getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = eventTargetDate - now;
+
+        if (difference < 0) {
+          const banner = document.getElementById('countdown-banner');
+          if (banner) {
+            banner.innerHTML = `
+              <div class="text-center font-bold text-xl text-emerald-300 py-2">
+               🎉 The ICoBiomasSE 2026 Conference Has Begun!
+              </div>`;
+          }
+          return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
 
     // Initialize Element SDK
     if (window.elementSdk) {
@@ -1548,21 +1637,9 @@
       }
     });
 
-    // Initial UI update
+    // Initial UI update & Countdown initialization
     updateUI();
+    initCountdown();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d1ba64955dada55',t:'MTc3MTczMzU5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
+ </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
